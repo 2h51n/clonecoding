@@ -9,5 +9,64 @@
     width: 1920px;
     height: 2426px;
     margin: 100px auto;
-    background-color: cadetblue;
+    background-color: #F0F0F0;
+    position: relative;
+}
+.bar{
+    width: 100%;
+    height: 53px;
+    background-color: #282525;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 500;
+    font-family: pretandard;
+    font-size: 26px;
+}
+.nav{
+    width: 100%;
+    height: 182px;
+    background-color: rgb(145, 145, 145);
+    position: relative;
+}
+.nav ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    display: block;
+}
+.nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+.nav ul li.sb a {
+    color: red;
+}
+.logo img{
+    width: 110px;
+    
+}
+
+.contents{
+    width: 100%;
+    height: 1837px;
+    background-color: #5a5555;
+}
+.footer{
+    width: 100%;
+    height: 356px;
+    background-color: rgb(76, 76, 76);
+}
+.ft-copy{
+    width: 100%;
+    height: 78px;
+    background-color: #282525;
 }
