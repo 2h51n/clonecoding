@@ -1,72 +1,187 @@
 @charset "utf-8";
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
 }
-.wrap{
-    width: 1920px;
-    height: 2426px;
-    margin: 100px auto;
-    background-color: #F0F0F0;
-    position: relative;
+@font-face {
+    font-family: 'pretandard';
+    src: url('fonts/pretandard.woff2') format('woff2'),
+    url('fonts/pretandard.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-.bar{
-    width: 100%;
-    height: 53px;
-    background-color: #282525;
-    color: #fff;
-    text-align: center;
-    line-height: 50px;
-    font-weight: 500;
-    font-family: pretandard;
-    font-size: 26px;
+.wrap {
+  width: 1920px;
+  height: 2426px;
+  margin: 100px auto;
+  background-color: #f0f0f0;
+  /* position: fixed */
 }
-.nav{
-    width: 100%;
-    height: 182px;
-    background-color: rgb(145, 145, 145);
-    position: relative;
+.header-notice {
+  width: 100%;
+  height: 53px;
+  background-color: #282525;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 500;
+  font-family: pretandard;
+  font-size: 26px;
+}
+.nav {
+  width: 100%;
+  height: 182px;
+  /* background-color: rgb(145, 145, 145); */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .nav ul {
-    display: inline-block;
-    list-style-type: none;
-    padding: 0;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
 }
 .nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 .nav ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 10px 15px;
-    display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  display: block;
 }
 .nav ul li a:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 .nav ul li.sb a {
-    color: red;
+  color: red;
 }
-.logo img{
-    width: 110px;
-    
+.submenu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 60px;
+}
+.submenu.left {
+  text-align: left;
 }
 
-.contents{
-    width: 100%;
-    height: 1837px;
-    background-color: #5a5555;
+.submenu.right {
+  text-align: right;
 }
-.footer{
-    width: 100%;
+.logo img {
+  width: 110px;
+}
+
+.contents {
+  width: 100%;
+  height: 1837px;
+  /* background-color: #5a5555; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.contents ul {
+  list-style: none;
+  flex-direction: column;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.contents li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.contents li a {
+  display: block;
+  width: 100%;
+}
+.contents .eu {
+  align-items: center;
+  display: flex;
+}
+.contents .eu > h1 {
+  text-align: right;
+  margin-left: 43px;
+  font-size: 70px;
+}
+.contents .jp {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.contents .jp > h1 {
+  text-align: left;
+  margin-right: 43px;
+  font-size: 70px;
+}
+.contents .life {
+  align-items: center;
+  display: flex;
+}
+.contents .life > h1 {
+  text-align: right;
+  margin-left: 43px;
+  font-size: 70px;
+}
+.contents .ach {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.contents .ach > h1 {
+  text-align: right;
+  margin-right: 43px;
+  font-size: 70px;
+}
+.contents .sale {
+  align-items: center;
+  display: flex;
+}
+.contents .sale > h1 {
+  text-align: right;
+  margin-left: 43px;
+  font-size: 70px;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 356px;
-    background-color: rgb(76, 76, 76);
+    /* background-color: rgb(76, 76, 76); */
+    padding: 15px 0;
 }
-.ft-copy{
+.footer p{
+    color: #B0ADAD;
+    font-weight: 600;
+    padding: 15px 0;
+}
+.ft-sns{
+    text-align: center;
+}
+.ft-menu{
+    text-align: center;
+    word-spacing: 30px;
+}
+.ft-info{
+    display: flex;
+    text-align: center;
+    justify-content: center
+}
+.ft-copy {
+    order: 2; /* ft-copy를 마지막으로 이동 */
     width: 100%;
     height: 78px;
     background-color: #282525;
+    margin-top: auto; /* 상단에 여백 추가하여 아래로 이동 */
+}
+.ft-copy > p {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    /* line-height: 78px; ft-copy의 높이에 맞추어 수직 중앙 정렬 */
 }
