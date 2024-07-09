@@ -6,11 +6,13 @@
   list-style: none;
 }
 @font-face {
-    font-family: 'pretandard';
-    src: url('fonts/pretandard.woff2') format('woff2'),
-    url('fonts/pretandard.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
+}
+a , p{
+    font-family: 'Pretendard-Regular';
 }
 .wrap {
   width: 1920px;
@@ -26,9 +28,12 @@
   color: #fff;
   text-align: center;
   line-height: 50px;
-  font-weight: 500;
-  font-family: pretandard;
   font-size: 26px;
+  display: flex;
+  justify-content: center
+}
+.vector-L .vector-R{
+    padding-top: 10px;
 }
 .nav {
   width: 100%;
@@ -157,7 +162,7 @@
 }
 .footer p{
     color: #B0ADAD;
-    font-weight: 600;
+    font-family: 'Pretendard-Semibold';
     padding: 15px 0;
 }
 .ft-sns{
