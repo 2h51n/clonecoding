@@ -23,7 +23,6 @@
     <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
     <meta property="og:description" content="fRANK 웹사이트입니다." />
     <title>반응형 클론 코딩</title>
-    <link rel="stylesheet" href="css/main.css" />
     <!-- 파비콘 -->
     <link
       rel="apple-touch-icon"
@@ -42,12 +41,20 @@
       sizes="16x16"
       href="img/favicon/favicon.ico"
     />
+        <!-- css -->
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- javascript -->
+        <script src="js/main.js"></script>
   </head>
   <body>
+
     <div class="wrap">
       <header class="header">
         <div class="header-notice">
-          <p class="sale_copy">&lt; SS24 50~80%OFF &gt;</p>
+          <i class="fa-solid fa-chevron-left" style="color: #ffffff;"></i>
+          <div class="vector-R"><img src="img/bar Vector-left.png" alt=""></div>
+          <p class="sale_copy">SS24 50~80%OFF</p>
+          <div class="vector-L"><img src="img/bar Vector-right.png" alt=""></div>
         </div>
         <nav class="nav">
           <ul class="submenu left">
@@ -147,6 +154,62 @@
         </div>
         <div class="ft-copy"><p>Customize everything about you</p></div>
       </footer>
+    <!-- 모달창 -->
+    <div class="modal-wrap" id="modal-wrap">
+        <div class="modal-main">
+            <span class="modal-logo">
+                <img src="img/modal-logo.png" alt="로고1">
+            </span>
+            <p class="modal-notice">
+              <span>무엇을 도와드릴까요?</span>
+            </p>
+            <div class="modal-close" id="modal-close">
+                확인했습니다.
+                <i>(Click 하여 닫기)</i>
+            </div>
+        </div>
     </div>
+    <!-- 고객상담 및 상단 버튼 -->
+    <div class="top-button">
+        <a href="#" class="chat-btn" id="chat-btn">
+            <img src="img/chat-btn.png" alt="chat">
+        </a>
+        <a href="#" class="shop-btn">fRANK</a>
+        <a href="#" class="top-btn" id="top-btn">
+            <img src="img/top-btn.webp" alt="top-btn">
+        </a>
+    </div>
+          </p>
+          <div class="modal-close" id="modal-close">
+              확인했습니다.
+              <i>(Click 하여 닫기)</i>
+          </div>
+      </div>
+  </div>
+    </div>
+    <script>
+      document.getElementById('chat-btn').addEventListener('click', function () {
+          document.getElementById('modal-wrap').style.display = 'block';
+      });
+
+      document.getElementById('modal-close').addEventListener('click', function () {
+          document.getElementById('modal-wrap').style.display = 'none';
+      });
+
+      window.onscroll = function () {
+          var topButton = document.getElementById('top-btn');
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              topButton.style.display = "block";
+          } else {
+              topButton.style.display = "none";
+          }
+      };
+
+      document.getElementById('top-btn').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      });
+  </script>
   </body>
 </html>

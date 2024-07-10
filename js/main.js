@@ -1,20 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var headerNotice = document.getElementById('header-notice');
-    var startX;
-    var scrollLeft;
+// main.js
+document.addEventListener("DOMContentLoaded", function () {
+  const modalWrap = document.getElementById("modal-wrap");
+  const modalClose = document.getElementById("modal-close");
 
-    headerNotice.addEventListener('touchstart', function(e) {
-      startX = e.touches[0].clientX;
-      scrollLeft = headerNotice.scrollLeft;
-    });
+  setTimeout(() => {
+    modalWrap.style.display = "flex";
+  }, 2000);
 
-    headerNotice.addEventListener('touchmove', function(e) {
-      var x = e.touches[0].clientX;
-      var distance = (x - startX) * 1.5;
-      headerNotice.scrollLeft = scrollLeft - distance;
-    });
+  modalClose.addEventListener("click", () => {
+    modalWrap.style.display = "none";
+  });
 
-    headerNotice.addEventListener('touchend', function(e) {
-      // Do something on touch end if needed
+  const topBtn = document.getElementById("top-btn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+
+  topBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
     });
   });
+
+  const chatBtn = document.getElementById("chat-btn");
+  chatBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    // 채팅 기능 추가 (예: 채팅 창 열기)
+    alert("채팅 기능이 준비 중입니다.");
+  });
+});
