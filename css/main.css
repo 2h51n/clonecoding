@@ -332,19 +332,39 @@ a, p {
 }
 
 /* 반응형 웹을 위한 미디어 쿼리 */
-/* TABLET 768x3781 */
+/* 반응형 웹을 위한 미디어 쿼리 */
+/* TABLET 768px 이하 */
 @media (max-width: 768px) {
+  .logo{
+    margin-top: 20px;
+  }
+  .main h1{
+    font-size: 35px;
+  }
   .vector-R > img,
   .vector-L > img {
     display: none; /* 테블릿 이하에서 벡터 이미지 숨김 */
   }
-  .contents ul {
+  .contents {
+    display: flex;
     flex-wrap: wrap; /* 컨텐츠 아이템들을 여러 줄에 걸쳐 정렬 */
     justify-content: center; /* 가운데 정렬 */
   }
-  .contents li {
+  .contents ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contents ul li {
     flex: 0 0 45%; /* 2개의 이미지를 나란히 배치 */
-    margin: 10px;
+    margin-bottom: 1rem;
+  }
+  .contents ul li:nth-child(3) {
+    display: none; /* 3번째 이미지 숨김 */
+  }
+  .contents ul li img {
+    width: 100%;
+    height: auto;
   }
   .nav {
     flex-direction: row; /* 기존에는 column이었으므로 row로 변경 */
@@ -357,40 +377,78 @@ a, p {
   .nav .header-notice {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
+    width: 100%; /* header-notice가 nav의 전체 너비를 차지하도록 설정 */
   }
   .nav .header-notice i {
     display: inline-block;
     margin-left: 10px;
   }
+  .nav .menu-icon {
+    display: inline-block;
+    margin-left: auto;
+    padding-left: 10px;
+  }
+/* 아이콘 크기 줄이기 */
+  .chat-btn img, .top-btn img {
+    width: 50px;
+    height: 50px;
+  }
+  .contents ul h1 {
+    font-size: 35px; /* h1 폰트 크기 50% 조정 */
+  }
 }
-
-/* APP 320x2170 */
+/* APP 320px 이하 */
 @media (max-width: 320px) {
- /* 헤더 공지 영역 */
- .header-notice {
-  font-size: 20px; /* 글자 크기 축소 */
-  height: auto; /* 높이 자동으로 조정 */
-  padding: 10px; /* 패딩 축소 */
-  line-height: normal; /* 기본 줄 높이로 변경 */
-}
+  /* 헤더 공지 영역 */
+  .header-notice {
+    font-size: 9px; /* 글자 크기 축소 */
+    height: auto; /* 높이 자동으로 조정 */
+    padding: 10px; /* 패딩 축소 */
+    line-height: normal; /* 기본 줄 높이로 변경 */
+    justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
+    width: 100%; /* header-notice가 nav의 전체 너비를 차지하도록 설정 */
+  }
 
-/* 네비게이션 메뉴 */
-.nav {
-  height: auto; /* 높이 자동으로 조정 */
-  flex-direction: column; /* 세로 방향으로 정렬 */
-}
+  /* 네비게이션 메뉴 */
+  .nav {
+    height: auto; /* 높이 자동으로 조정 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+  }
 
-/* 컨텐츠 아이템들 */
-.contents ul {
-  flex-direction: column; /* 세로 방향으로 정렬 */
-}
+  /* 메뉴 아이콘 */
+  .nav .menu-icon {
+    display: inline-block;
+    margin-left: auto;
+    padding-left: 10px;
+  }
 
-.contents li {
-  flex: 0 0 100%; /* 아이템 1개씩만 표시 */
-}
+  /* 컨텐츠 아이템들 */
+  .contents ul {
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+  }
 
-/* 섹션 제목 크기 축소 */
-.contents h1 {
-  font-size: 50px;
-}
+  .contents ul h1 {
+    font-size: 1rem; /* h1 폰트 크기 1rem로 조정 */
+    height: auto; /* 높이 자동으로 조정 */
+  }
+
+  .contents ul li {
+    flex: 0 0 100%; /* 이미지 1장만 보이게 조정 */
+    margin-bottom: 1rem;
+  }
+  .contents ul li:nth-child(2) {
+    display: none; /* 2번째 이미지 숨김 */
+
+  /* 섹션 제목 크기 축소 */
+  .contents > h1 {
+    font-size: 20px; /* h1 폰트 크기 1rem로 조정 */
+    text-align: left; /* 왼쪽 정렬 */
+  }
+
+  .chat-btn img, .top-btn img {
+    width: 50px;
+    height: 50px;
+  }
 }
