@@ -185,6 +185,10 @@ a, p {
   font-size: 70px;
 }
 
+.contents .life >img {
+  width: 100%;
+}
+
 /* Ach 섹션 스타일 */
 .contents .ach {
   align-items: center;
@@ -362,28 +366,31 @@ a, p {
 
 /* APP 320x2170 */
 @media (max-width: 320px) {
-  .contents ul {
-    flex-wrap: wrap; /* 컨텐츠 아이템들을 여러 줄에 걸쳐 정렬 */
-    justify-content: center; /* 가운데 정렬 */
-  }
-  .contents li {
-    flex: 0 0 100%; /* 한 번에 하나의 이미지만 보이도록 설정 */
-    margin: 10px;
-  }
-  .nav {
-    flex-direction: row; /* 기존에는 column이었으므로 row로 변경 */
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav ul {
-    display: none; /* 기존 메뉴 숨기기 */
-  }
-  .nav .header-notice {
-    display: flex;
-    align-items: center;
-  }
-  .nav .header-notice i {
-    display: inline-block;
-    margin-left: 10px;
-  }
+ /* 헤더 공지 영역 */
+ .header-notice {
+  font-size: 20px; /* 글자 크기 축소 */
+  height: auto; /* 높이 자동으로 조정 */
+  padding: 10px; /* 패딩 축소 */
+  line-height: normal; /* 기본 줄 높이로 변경 */
+}
+
+/* 네비게이션 메뉴 */
+.nav {
+  height: auto; /* 높이 자동으로 조정 */
+  flex-direction: column; /* 세로 방향으로 정렬 */
+}
+
+/* 컨텐츠 아이템들 */
+.contents ul {
+  flex-direction: column; /* 세로 방향으로 정렬 */
+}
+
+.contents li {
+  flex: 0 0 100%; /* 아이템 1개씩만 표시 */
+}
+
+/* 섹션 제목 크기 축소 */
+.contents h1 {
+  font-size: 50px;
+}
 }
