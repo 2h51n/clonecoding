@@ -1,25 +1,34 @@
 @charset "utf-8";
+/* 전역 스타일 초기화 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
 }
+
+/* Pretendard-Regular 폰트 로드 */
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
-a , p{
-    font-family: 'Pretendard-Regular';
+
+/* 모든 링크와 문단에 Pretendard-Regular 폰트 적용 */
+a, p {
+  font-family: 'Pretendard-Regular';
 }
+
+/* 전체 컨텐츠를 감싸는 최대 너비 설정 및 가운데 정렬 */
 .wrap {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
   background-color: #f0f0f0;
 }
+
+/* 헤더 공지 영역 스타일 */
 .header-notice {
   width: 100%;
   height: 53px;
@@ -32,18 +41,23 @@ a , p{
   justify-content: center;
   position: relative;
 }
-.vector-R >img{   
+
+/* 오른쪽 및 왼쪽 배경 처리 */
+.vector-R > img {   
   position: absolute;
   top: 50%;
   left: 30%;
   transform: translate(-0% , -50%);
 }
-.vector-L >img{   
+
+.vector-L > img {   
   position: absolute;
   top: 50%;
   right: 30%;
   transform: translate(-0% , -50%);
 }
+
+/* 네비게이션 메뉴 스타일 */
 .nav {
   width: 100%;
   height: 182px;
@@ -52,42 +66,60 @@ a , p{
   align-items: center;
   justify-content: space-between;
 }
+
+/* 네비게이션 메뉴의 ul 스타일 */
 .nav ul {
   display: inline-block;
   list-style-type: none;
   padding: 0;
 }
+
+/* 네비게이션 메뉴의 li 스타일 */
 .nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
+
+/* 네비게이션 메뉴의 링크 스타일 */
 .nav ul li a {
   text-decoration: none;
   color: rgb(0, 0, 0);
   padding: 10px 15px;
   display: block;
 }
+
+/* 네비게이션 메뉴의 링크 호버 스타일 */
 .nav ul li a:hover {
   background-color: #f0f0f0;
 }
+
+/* 특정 메뉴 스타일 */
 .nav ul li.sb a {
   color: red;
 }
+
+/* 서브 메뉴 스타일 */
 .submenu {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 60px;
 }
+
 .submenu.left {
   text-align: left;
 }
+
 .submenu.right {
   text-align: right;
 }
+
+/* 로고 이미지 스타일 */
 .logo img {
   width: 110px;
 }
+
+/* 컨텐츠 영역 스타일 */
 .contents {
   width: 100%;
   display: flex;
@@ -95,90 +127,123 @@ a , p{
   justify-content: space-between;
   align-items: center;
 }
+
+/* 컨텐츠의 ul 스타일 */
 .contents ul {
   list-style: none;
   flex-direction: column;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; /* 반대 방향으로 표시 */
 }
+
+/* 컨텐츠의 li 스타일 */
 .contents li {
   display: inline-block;
   margin-right: 10px;
 }
+
+/* 컨텐츠의 링크 스타일 */
 .contents li a {
   display: block;
   width: 100%;
 }
+
+/* EU 섹션 스타일 */
 .contents .eu {
   align-items: center;
   display: flex;
 }
+
 .contents .eu > h1 {
   text-align: right;
   margin-left: 43px;
   font-size: 70px;
 }
+
+/* JP 섹션 스타일 */
 .contents .jp {
   align-items: center;
   display: flex;
   flex-direction: row;
 }
+
 .contents .jp > h1 {
   text-align: left;
   margin-right: 43px;
   font-size: 70px;
 }
+
+/* Life 섹션 스타일 */
 .contents .life {
   align-items: center;
   display: flex;
 }
+
 .contents .life > h1 {
   text-align: right;
   margin-left: 43px;
   font-size: 70px;
 }
+
+/* Ach 섹션 스타일 */
 .contents .ach {
   align-items: center;
   display: flex;
   flex-direction: row;
 }
+
 .contents .ach > h1 {
   text-align: right;
   margin-right: 43px;
   font-size: 70px;
 }
+
+/* Sale 섹션 스타일 */
 .contents .sale {
   align-items: center;
   display: flex;
 }
+
 .contents .sale > h1 {
   text-align: right;
   margin-left: 43px;
   font-size: 70px;
 }
+
+/* 푸터 스타일 */
 .footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 15px 0;
 }
+
+/* 푸터 문단 스타일 */
 .footer p {
   color: #B0ADAD;
   font-family: 'Pretendard-Semibold';
   padding: 15px 0;
 }
+
+/* 푸터 SNS 스타일 */
 .ft-sns {
   text-align: center;
 }
+
+/* 푸터 메뉴 스타일 */
 .ft-menu {
   text-align: center;
   word-spacing: 30px;
 }
+
+/* 푸터 정보 스타일 */
 .ft-info {
   display: flex;
   text-align: center;
-  justify-content: center
+  justify-content: center;
 }
+
+/* 푸터 저작권 스타일 */
 .ft-copy {
   order: 2; /* ft-copy를 마지막으로 이동 */
   width: 100%;
@@ -186,13 +251,15 @@ a , p{
   background-color: #282525;
   margin-top: auto; /* 상단에 여백 추가하여 아래로 이동 */
 }
+
 .ft-copy > p {
   font-size: 24px;
   color: #fff;
   text-align: center;
   /* line-height: 78px; ft-copy의 높이에 맞추어 수직 중앙 정렬 */
 }
-/* 모달창 */
+
+/* 모달창 스타일 */
 .modal-wrap {
   display: none;
   position: fixed;
@@ -214,8 +281,8 @@ a , p{
 }
 
 .modal-logo img {
-  width: 50px;
-  height: 50px;
+  width: 120px;
+  height: 40px;
 }
 
 .modal-notice {
@@ -228,11 +295,12 @@ a , p{
   color: #007BFF;
   cursor: pointer;
 }
-/* CS 창 */
+
+/* CS 창 스타일 */
 .top-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 50px;
+  right: 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -242,7 +310,7 @@ a , p{
   display: flex;
   align-items: center;
   padding: 10px;
-  background: #444;
+  /* background: #444; */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -250,122 +318,72 @@ a , p{
 }
 
 .chat-btn img, .top-btn img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+
 }
 
 .top-btn {
-  display: none;
+  display: none; /* 초기에는 숨김 */
 }
 
 /* 반응형 웹을 위한 미디어 쿼리 */
 /* TABLET 768x3781 */
 @media (max-width: 768px) {
-  .wrap {
-    width: 100%;
-    margin: 0 auto;
+  .vector-R > img,
+  .vector-L > img {
+    display: none; /* 테블릿 이하에서 벡터 이미지 숨김 */
   }
-
-  .header-notice {
-    font-size: 20px;
-  }
-
-  .nav {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .nav ul {
-    display: block;
-  }
-
-  .submenu {
-    margin: 20px;
-  }
-
-  .logo img {
-    width: 80px;
-  }
-
-  .contents {
-    height: auto;
-  }
-
   .contents ul {
-    flex-direction: column;
+    flex-wrap: wrap; /* 컨텐츠 아이템들을 여러 줄에 걸쳐 정렬 */
+    justify-content: center; /* 가운데 정렬 */
+  }
+  .contents li {
+    flex: 0 0 45%; /* 2개의 이미지를 나란히 배치 */
+    margin: 10px;
+  }
+  .nav {
+    flex-direction: row; /* 기존에는 column이었으므로 row로 변경 */
+    justify-content: space-between;
     align-items: center;
   }
-
-  .contents .eu > h1,
-  .contents .jp > h1,
-  .contents .life > h1,
-  .contents .ach > h1,
-  .contents .sale > h1 {
-    font-size: 50px;
-    margin: 20px 0;
+  .nav ul {
+    display: none; /* 기존 메뉴 숨기기 */
   }
-
-  .footer {
-    height: auto;
+  .nav .header-notice {
+    display: flex;
+    align-items: center;
   }
-
-  .ft-menu {
-    word-spacing: normal;
+  .nav .header-notice i {
+    display: inline-block;
+    margin-left: 10px;
   }
 }
 
 /* APP 320x2170 */
 @media (max-width: 320px) {
-  .wrap {
-    width: 100%;
-    margin: 0 auto;
+  .contents ul {
+    flex-wrap: wrap; /* 컨텐츠 아이템들을 여러 줄에 걸쳐 정렬 */
+    justify-content: center; /* 가운데 정렬 */
   }
-
-  .header-notice {
-    font-size: 16px;
-  }
-
-  .nav {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .nav ul {
-    display: block;
-  }
-
-  .submenu {
+  .contents li {
+    flex: 0 0 100%; /* 한 번에 하나의 이미지만 보이도록 설정 */
     margin: 10px;
   }
-
-  .logo img {
-    width: 50px;
-  }
-
-  .contents {
-    height: auto;
-  }
-
-  .contents ul {
-    flex-direction: column;
+  .nav {
+    flex-direction: row; /* 기존에는 column이었으므로 row로 변경 */
+    justify-content: space-between;
     align-items: center;
   }
-
-  .contents .eu > h1,
-  .contents .jp > h1,
-  .contents .life > h1,
-  .contents .ach > h1,
-  .contents .sale > h1 {
-    font-size: 30px;
-    margin: 10px 0;
+  .nav ul {
+    display: none; /* 기존 메뉴 숨기기 */
   }
-
-  .footer {
-    height: auto;
+  .nav .header-notice {
+    display: flex;
+    align-items: center;
   }
-
-  .ft-menu {
-    word-spacing: normal;
+  .nav .header-notice i {
+    display: inline-block;
+    margin-left: 10px;
   }
 }
