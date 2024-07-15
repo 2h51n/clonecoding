@@ -39,56 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     alert("채팅 기능이 준비 중입니다.");
   });
-  // 모달 창 닫기
-  modalClose.addEventListener("click", function () {
-    modalWrap.style.display = "none";
-  });
-
-  // ESC 키를 눌러 모달 닫기
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      modalWrap.style.display = "none";
-    }
-  });
-  // 모달 외부를 클릭하여 모달 닫기
-  modalWrap.addEventListener("click", function (event) {
-    if (event.target === modalWrap) {
-      modalWrap.style.display = "none";
-    }
-  });
-
-  // 채팅 버튼 클릭 시 모달 열기
-  chatBtn.addEventListener("click", function (event) {
-    event.preventDefault();
-    modalWrap.style.display = "flex";
-  });
-  // Swiper 초기화
-  const swiperContainers = document.querySelectorAll(".swiper-slide");
-  swiperContainers.forEach((container) => {
-    let swiperOptions = {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiperOptions = {
+      loop: true, // 루프 설정
+      autoplay: {
+        delay: 3000, // 3초마다 자동 슬라이드
+        disableOnInteraction: false // 사용자 상호 작용 후 자동 재생 유지
       },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-      },
+      slidesPerView: 'auto', // 자동으로 슬라이드 수 조정
+      spaceBetween: 10 // 슬라이드 사이 간격 (px)
     };
-    //autoplay 옵션 추가
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      swiperOptions = {
-        ...swiperOptions,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-      };
-    }
-    new Swiper(container, swiperOptions);
+
+    var swiperEU = new Swiper('.eu', swiperOptions);
+    var swiperJP = new Swiper('.jp', swiperOptions);
+    var swiperLife = new Swiper('.life', swiperOptions);
+    var swiperAch = new Swiper('.ach', swiperOptions);
+    var swiperSale = new Swiper('.sale', swiperOptions);
   });
 });

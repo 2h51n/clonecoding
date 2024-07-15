@@ -80,7 +80,6 @@ p {
   list-style-type: none;
   padding: 0;
 }
-
 /* 네비게이션 메뉴의 li 스타일 */
 .nav ul li {
   display: inline-block;
@@ -97,6 +96,9 @@ p {
 .nav ul li a:hover {
   background-color: #f0f0f0;
 }
+.sale_copy{
+  font-size: 1vw;
+}
 /* 특정 메뉴 스타일 */
 .nav ul li.sb a {
   color: red;
@@ -110,9 +112,11 @@ p {
 }
 .submenu.left {
   text-align: left;
+  font-size: 1.1vw;
 }
 .submenu.right {
   text-align: right;
+  font-size: 1.1vw;
 }
 /* 로고 이미지 스타일 */
 .logo img {
@@ -148,6 +152,7 @@ p {
 .contents .eu {
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 .contents .eu > h1 {
   text-align: right;
@@ -159,6 +164,7 @@ p {
   align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .contents .jp > h1 {
   text-align: left;
@@ -169,6 +175,7 @@ p {
 .contents .life {
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 .contents .life > h1 {
   text-align: right;
@@ -183,6 +190,7 @@ p {
   align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .contents .ach > h1 {
   text-align: right;
@@ -193,6 +201,7 @@ p {
 .contents .sale {
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 .contents .sale > h1 {
   text-align: right;
@@ -204,7 +213,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px 0;
+  padding-top: 15px 0;
 }
 /* 푸터 문단 스타일 */
 .footer p {
@@ -215,6 +224,7 @@ p {
 /* 푸터 SNS 스타일 */
 .ft-sns {
   text-align: center;
+  padding: 20px;
 }
 /* 푸터 메뉴 스타일 */
 .ft-menu {
@@ -233,7 +243,7 @@ p {
   width: 100%;
   height: 78px;
   background-color: #282525;
-  margin-top: auto; /* 상단에 여백 추가하여 아래로 이동 */
+  margin-bottom: auto; /* 상단에 여백 추가하여 아래로 이동 */
 }
 .ft-copy > p {
   font-size: 24px;
@@ -298,8 +308,10 @@ p {
 /* 아이콘 이미지 */
 .chat-btn img,
 .top-btn img {
-  width: 75px;
-  height: 75px;
+  width: 15vw; /* 너비를 뷰포트 너비의 15%로 설정 */
+  height: auto; /* 높이는 자동으로 조정 */
+  max-width: 75px; /* 최대 너비 설정 */
+  max-height: 75px; /* 최대 높이 설정 */
 }
 /* 탑버튼 */
 .top-btn {
@@ -318,13 +330,16 @@ p {
 .swiper-slide {
   flex: 0 0 auto;
 }
-/* Submenu 호버 기능 추가 */
+/* Submenu와 Contents 호버 효과 */
 .submenu.left li:hover a,
 .submenu.right li:hover a {
-  color: #4caf50;
+  color: #4caf50; /* 호버 시 글자색 변경 */
 }
-/* Contents 호버 기능 추가 */
+
+.contents ul li {
+  transition: transform 0.3s ease; /* 호버 시 변환 효과 설정 */
+}
+
 .contents ul li:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+  transform: scale(1.05); /* 호버 시 크기 확대 */
 }
