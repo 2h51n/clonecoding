@@ -3,37 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fRANK Select shop</title>
-    <!-- 외부 CSS 파일 링크 -->
+    <title>fRANK Select Shop</title>
     <link rel="stylesheet" href="css/main.css" />
-    <!-- 외부 JavaScript 파일 링크 -->
     <script src="js/main.js"></script>
-    <!-- 파비콘 설정 -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon.ico" />
-    <!-- SEO 관련 메타태그 -->
     <meta name="description" content="fRANK 웹사이트입니다." />
     <meta name="keywords" content="fRANK, shop, RANK Controuctor" />
     <meta name="author" content="fRANK" />
-    <!-- 소셜 미디어 공유 메타태그 -->
     <meta property="og:title" content="fRANK" />
     <meta property="og:site_name" content="fRANK 웹사이트" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.io/" />
+    <meta property="og:url" content="https://www.frank.com" />
     <meta property="og:image" content="images/metaimg.png" />
     <meta property="og:description" content="fRANK 웹사이트입니다." />
   </head>
   <body>
     <div class="wrap">
       <header class="header">
-        <div class="header-notice">
+        <div class="header-notice" aria-label="공지사항">
           <i class="fa-solid fa-chevron-left" style="color: #ffffff"></i>
-          <div class="vector-R"><img src="img/bar Vector-left.png" alt="" /></div>
+          <div class="vector-R"><img src="img/bar Vector-left.png" alt="Vector Image Left" /></div>
           <p class="sale_copy">SS24 50~80%OFF</p>
-          <div class="vector-L"><img src="img/bar Vector-right.png" alt="" /></div>
+          <div class="vector-L"><img src="img/bar Vector-right.png" alt="Vector Image Right" /></div>
         </div>
-        <nav class="nav">
+        <nav class="nav" aria-label="주 네비게이션">
+          <!-- 반응형 디자인 적용: 320px에서 submenu left, right 숨김 -->
           <ul class="submenu left">
             <li><a href="#">SEARCH</a></li>
             <li><a href="#">ACCOUNT</a></li>
@@ -41,7 +37,7 @@
             <li><a href="#">NEW ARRIVES</a></li>
           </ul>
           <div class="logo">
-            <a href="#"><img src="img/fRANK bk.png" alt="로고" /></a>
+            <a href="#"><img src="img/fRANK bk.png" alt="fRANK 로고" /></a>
           </div>
           <ul class="submenu right">
             <li><a href="#">SHOP</a></li>
@@ -58,70 +54,81 @@
         </nav>
       </header>
       <main class="contents">
-        <ul class="eu">
-          <h1>europe</h1>
-          <li>
-            <a href="#"><img src="img/eu (2).png" alt="유럽1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/eu (3).png" alt="유럽2" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/eu (1).png" alt="유럽3" /></a>
-          </li>
+        <!-- Swiper 적용을 위한 클래스 추가 -->
+        <ul class="eu swiper-container">
+          <h1>Europe</h1>
+          <div class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"><img src="img/eu (2).png" alt="Europe Image 1" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/eu (3).png" alt="Europe Image 2" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/eu (1).png" alt="Europe Image 3" /></a>
+            </li>
+          </div>
         </ul>
-        <ul class="jp">
-          <h1>japan</h1>
-          <li>
-            <a href="#"><img src="img/jp (2).png" alt="일본1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/jp (1).png" alt="일본2" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/jp (3).png" alt="일본3" /></a>
-          </li>
+        <ul class="jp swiper-container">
+          <h1>Japan</h1>
+          <div class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"><img src="img/jp (2).png" alt="Japan Image 1" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/jp (1).png" alt="Japan Image 2" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/jp (3).png" alt="Japan Image 3" /></a>
+            </li>
+          </div>
         </ul>
-        <ul class="life">
-          <h1>life</h1>
-          <li>
-            <a href="#"><img src="img/life (2).png" alt="라이프1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/life (3).png" alt="라이프2" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/life (1).png" alt="라이프3" /></a>
-          </li>
+        <ul class="life swiper-container">
+          <h1>Life</h1>
+          <div class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"><img src="img/life (2).png" alt="Life Image 1" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/life (3).png" alt="Life Image 2" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/life (1).png" alt="Life Image 3" /></a>
+            </li>
+          </div>
         </ul>
-        <ul class="ach">
-          <h1>achive</h1>
-          <li>
-            <a href="#"><img src="img/ach (2).png" alt="아카이브1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/ach (3).png" alt="아카이브2" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/ach (1).png" alt="아카이브3" /></a>
-          </li>
+        <ul class="ach swiper-container">
+          <h1>Achive</h1>
+          <div class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"><img src="img/ach (2).png" alt="Achive Image 1" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/ach (3).png" alt="Achive Image 2" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/ach (1).png" alt="Achive Image 3" /></a>
+            </li>
+          </div>
         </ul>
-        <ul class="sale">
-          <h1>sale</h1>
-          <li>
-            <a href="#"><img src="img/sale (2).png" alt="세일1" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/sale (3).png" alt="세일2" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/sale (1).png" alt="세일3" /></a>
-          </li>
+        <ul class="sale swiper-container">
+          <h1>Sale</h1>
+          <div class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="#"><img src="img/sale (2).png" alt="Sale Image 1" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/sale (3).png" alt="Sale Image 2" /></a>
+            </li>
+            <li class="swiper-slide">
+              <a href="#"><img src="img/sale (1).png" alt="Sale Image 3" /></a>
+            </li>
+          </div>
         </ul>
       </main>
       <footer class="footer">
         <div class="ft-sns">
-          <a href="#"><img src="img/ft-sns.png" alt="sns이미지" /></a>
+          <a href="#"><img src="img/ft-sns.png" alt="SNS 이미지" /></a>
         </div>
         <div class="ft-menu">
           <p>ABOUT OFFLINE STORE NOTICE Q&A PRIVACY POLICY TERMS</p>
@@ -137,7 +144,9 @@
             CEO : XXX XXX XX /<br />
           </p>
         </div>
-        <div class="ft-copy"><p>Customize everything about you</p></div>
+        <div class="ft-copy">
+          <p>Customize everything about you</p>
+        </div>
       </footer>
       <div class="modal-wrap" id="modal-wrap">
         <div class="modal-main">

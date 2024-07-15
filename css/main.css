@@ -308,3 +308,23 @@ p {
 .contents ul h1 {
   font-size: 3.5rem; /* h1 폰트 크기 50% 조정 */
 }
+/* Swiper 컨테이너 스타일 */
+.swiper-container {
+  width: 100%;
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide {
+  flex: 0 0 auto;
+}
+/* Submenu 호버 기능 추가 */
+.submenu.left li:hover a,
+.submenu.right li:hover a {
+  color: #4caf50;
+}
+/* Contents 호버 기능 추가 */
+.contents ul li:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

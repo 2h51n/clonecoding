@@ -113,4 +113,12 @@
   .contents ul li:nth-child(2) {
     display: none; /* 2번째 이미지 숨김 */
   }
+  .submenu.left,
+  .submenu.right {
+    display: none;
+  }
+  .logo img {
+    margin: 0 auto;
+    display: block;
+  }
 }
