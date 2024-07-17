@@ -1,10 +1,22 @@
 @charset "utf-8";
 /* 반응형 웹을 위한 미디어 쿼리 */
+.modal-main {
+  width: 90%;
+}
+.contents ul {
+  flex-direction: column;
+}
+.contents ul.jp > h1,
+.contents ul.eu > h1,
+.contents ul.life > h1,
+.contents ul.ach > h1,
+.contents ul.sale > h1 {
+  font-size: 3rem;
+}
 /* TABLET 768px 이하 */
 @media (max-width: 768px) {
   /* 로고 */
   .logo {
-    /* margin-top: 20px; */
     width: 100%;
     text-align: center;
   }
@@ -13,109 +25,53 @@
   .vector-L > img {
     display: none; /* 테블릿 이하에서 벡터 이미지 숨김 */
   }
-  /* 콘텐츠 */
-  .contents {
+  /* 컨텐츠 영역 스타일 */
+  .section {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap; /* 컨텐츠 아이템들을 여러 줄에 걸쳐 정렬 */
-    justify-content: center; /* 가운데 정렬 */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
   }
-  .contents ul {
+  /* 각 섹션 이미지 갤러리 */
+  .swiper-container image-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 10px;
+    overflow: hidden;
   }
-  /* h1 폰트 사이즈 조정 */
-  .contents ul.eu > h1 {
-    font-size: 4rem;
+  .image-gallery a {
+    flex: 0 0 calc(50% - 20px); /* 갤러리의 절반 너비 */
+    margin: 10px; /* 이미지 사이 여백 */
   }
-  .contents ul.jp > h1 {
-    font-size: 4rem;
+  /* 아이콘 이미지 */
+  .chat-btn img,
+  .top-btn img {
+    width: 50px;
+    height: 50px;
   }
-  .contents ul.life > h1 {
-    font-size: 4rem;
-  }
-  .contents ul.ach > h1 {
-    font-size: 4rem;
-  }
-  .contents ul.sale > h1 {
-    font-size: 4rem;
-  }
-  .contents ul li a {
-    display: inline-block;
-    width: 170px;
-  }
-  .contents ul li:nth-child(3) {
-    display: none; /* 3번째 이미지 숨김 */
-  }
-  .contents ul li img {
-    width: 100%;
-    height: auto;
-  }
-  /* 메뉴 아이콘 */
-  .nav .menu-icon {
-    display: inline-block;
-    margin-left: auto;
-  }
-  .nav {
-    flex-direction: row; /* 기존에는 column이었으므로 row로 변경 */
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-/* 아이콘 이미지 */
-.chat-btn img,
-.top-btn img {
-  width: 50px;
-  height: 50px;
-}
-/* APP 320px 이하 */
-@media (max-width: 320px) {
-  /* 헤더 공지 영역 */
-  .header-notice {
-    font-size: 3rem; /* 글자 크기 축소 */
-    height: auto; /* 높이 자동으로 조정 */
-    padding: 10px; /* 패딩 축소 */
-    line-height: normal; /* 기본 줄 높이로 변경 */
-    justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
-    width: 100%; /* header-notice가 nav의 전체 너비를 차지하도록 설정 */
-  }
-  /* 네비게이션 메뉴 */
-  .nav {
-    height: auto; /* 높이 자동으로 조정 */
-    flex-direction: column; /* 세로 방향으로 정렬 */
-    display: none; /* NAV 메뉴 가림 */
-  }
-  /* 컨텐츠 아이템들 */
-  .contents ul {
-    flex-direction: column; /* 세로 방향으로 정렬 */
-    align-items: flex-start; /* 왼쪽 정렬 */
-  }
-  .contents ul.eu > h1 {
-    font-size: 3rem;
-  }
-  .contents ul.jp > h1 {
-    font-size: 3rem;
-  }
-  .contents ul.life > h1 {
-    font-size: 3rem;
-  }
-  .contents ul.ach > h1 {
-    font-size: 3rem;
-  }
-  .contents ul.sale > h1 {
-    font-size: 3rem;
-  }
-  .contents ul li {
-    flex: 0 0 100%; /* 이미지 1장만 보이게 조정 */
-    margin-bottom: 1rem;
-  }
-  .contents ul li:nth-child(2) {
-    display: none; /* 2번째 이미지 숨김 */
-  }
-  .submenu.left,
-  .submenu.right {
-    display: none;
+  /* APP 480px 이하 */
+  @media (max-width: 480px) {
+    /* 헤더 공지 영역 */
+    .header-notice {
+      font-size: 3rem; /* 글자 크기 축소 */
+      height: auto; /* 높이 자동으로 조정 */
+      padding: 10px; /* 패딩 축소 */
+      line-height: normal; /* 기본 줄 높이로 변경 */
+      justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
+      width: 100%; /* header-notice가 nav의 전체 너비를 차지하도록 설정 */
+    }
+    /* 네비게이션 메뉴 */
+    .nav {
+      height: auto; /* 높이 자동으로 조정 */
+      flex-direction: column; /* 세로 방향으로 정렬 */
+      display: none; /* NAV 메뉴 가림 */
+    }
+    /* 이미지 스타일 */
+    .contents section .image-gallery a {
+      margin: 10px 0; /* 이미지 사이 여백 설정 */
+    }
   }
   .logo img {
     padding-top: 60px;

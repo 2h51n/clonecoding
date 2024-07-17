@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* 세일 카피 스와이퍼 적용*/
+.sale_copy {
+  overflow: hidden;
+  width: 100%;
+  text-align: center; /* 텍스트를 가운데 정렬 */
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide {
+  flex: 0 0 auto;
+  padding: 0 10px;
+  white-space: normal;
+}

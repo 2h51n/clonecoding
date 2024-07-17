@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 페이지가 로드된 후 2초 뒤에 모달 창을 표시.
   setTimeout(() => {
     modalWrap.style.display = "flex";
-  }, 2000);
+  }, 1000);
   // 모달을 닫는 버튼에 클릭 이벤트를 추가.
   modalClose.addEventListener("click", () => {
     modalWrap.style.display = "none";
@@ -39,21 +39,42 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     alert("채팅 기능이 준비 중입니다.");
   });
-  document.addEventListener('DOMContentLoaded', function () {
-    var swiperOptions = {
-      loop: true, // 루프 설정
-      autoplay: {
-        delay: 3000, // 3초마다 자동 슬라이드
-        disableOnInteraction: false // 사용자 상호 작용 후 자동 재생 유지
+  // sale_copy 스와이퍼 적용
+  var swiperOptions = {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    direction: "horizontal",
+    containerModifierClass: "swiper-container-",
+    wrapperClass: "swiper-wrapper",
+    slideClass: "swiper-slide",
+  };
+  var saleCopySwiper = new Swiper(".sale_copy", swiperOptions);
+  // 메인 이미지 갤러리 스와이퍼 적용
+  var mainSwiperOptions = {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 4,
+    spaceBetween: 30,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
       },
-      slidesPerView: 'auto', // 자동으로 슬라이드 수 조정
-      spaceBetween: 10 // 슬라이드 사이 간격 (px)
-    };
-
-    var swiperEU = new Swiper('.eu', swiperOptions);
-    var swiperJP = new Swiper('.jp', swiperOptions);
-    var swiperLife = new Swiper('.life', swiperOptions);
-    var swiperAch = new Swiper('.ach', swiperOptions);
-    var swiperSale = new Swiper('.sale', swiperOptions);
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+    },
+  };
+  // 각 섹션에 스와이퍼 적용
+  document.querySelectorAll(".image-gallery").forEach((gallery) => {
+    new Swiper(gallery, mainSwiperOptions);
   });
 });

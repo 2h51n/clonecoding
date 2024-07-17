@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CS 창 스타일 */
+.top-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* 아이콘 */
+  .chat-btn,
+  .shop-btn,
+  .top-btn {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    /* background: #444; */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  /* 아이콘 이미지 */
+  .chat-btn img,
+  .top-btn img {
+    width: 15vw; /* 너비를 뷰포트 너비의 15%로 설정 */
+    height: auto; /* 높이는 자동으로 조정 */
+    max-width: 75px; /* 최대 너비 설정 */
+    max-height: 75px; /* 최대 높이 설정 */
+  }
+/* 탑버튼 */
+.top-btn {
+    display: none; /* 초기에는 숨김 */
+  }
+  .contents ul h1 {
+    font-size: 3.5rem; /* h1 폰트 크기 50% 조정 */
+  }

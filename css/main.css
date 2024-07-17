@@ -1,5 +1,9 @@
 @charset "utf-8";
 @import url("responsive.css");
+@import url("sale_copy.css");
+@import url("icon.css");
+@import url("submenu.css");
+
 /* 전역 스타일 초기화 */
 * {
   margin: 0;
@@ -96,7 +100,7 @@ p {
 .nav ul li a:hover {
   background-color: #f0f0f0;
 }
-.sale_copy{
+.sale_copy p {
   font-size: 1vw;
 }
 /* 특정 메뉴 스타일 */
@@ -112,11 +116,11 @@ p {
 }
 .submenu.left {
   text-align: left;
-  font-size: 1.1vw;
+  font-size: 0.5vw;
 }
 .submenu.right {
   text-align: right;
-  font-size: 1.1vw;
+  font-size: 0.5vw;
 }
 /* 로고 이미지 스타일 */
 .logo img {
@@ -130,83 +134,72 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-/* 컨텐츠의 ul 스타일 */
-.contents ul {
-  list-style: none;
-  flex-direction: column;
+main.contents {
+  padding: 20px;
+}
+
+/* 각 섹션 스타일 */
+section {
+  margin-bottom: 40px;
+}
+
+section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: flex-start;
+  text-transform: uppercase;
+}
+
+/* 스와이퍼 컨테이너 스타일 */
+.swiper-container {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
   display: flex;
-  flex-direction: row-reverse; /* 반대 방향으로 표시 */
-  padding-top: 10px;
 }
-/* 컨텐츠의 li 스타일 */
-.contents li {
-  display: inline-block;
-  margin-right: 10px;
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
-/* 컨텐츠의 링크 스타일 */
-.contents li a {
+
+.swiper-slide a {
   display: block;
   width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 이미지 비율을 4:3으로 유지 */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-/* EU 섹션 스타일 */
-.contents .eu {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+
+.swiper-slide a:hover {
+  transform: scale(1.05);
 }
-.contents .eu > h1 {
-  text-align: right;
-  margin-left: 43px;
-  font-size: 7rem;
-}
-/* JP 섹션 스타일 */
-.contents .jp {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.contents .jp > h1 {
-  text-align: left;
-  margin-right: 43px;
-  font-size: 7rem;
-}
-/* Life 섹션 스타일 */
-.contents .life {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-.contents .life > h1 {
-  text-align: right;
-  margin-left: 43px;
-  font-size: 7rem;
-}
-.contents .life > img {
+
+.swiper-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-/* Ach 섹션 스타일 */
-.contents .ach {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.contents .ach > h1 {
-  text-align: right;
-  margin-right: 43px;
-  font-size: 7rem;
-}
-/* Sale 섹션 스타일 */
-.contents .sale {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-.contents .sale > h1 {
-  text-align: right;
-  margin-left: 43px;
-  font-size: 7rem;
+
+.swiper-slide img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 /* 푸터 스타일 */
 .footer {
@@ -246,100 +239,49 @@ p {
   margin-bottom: auto; /* 상단에 여백 추가하여 아래로 이동 */
 }
 .ft-copy > p {
-  font-size: 24px;
+  font-size: 30px;
   color: #fff;
   text-align: center;
   /* line-height: 78px; ft-copy의 높이에 맞추어 수직 중앙 정렬 */
 }
-/* 모달창 스타일 */
+/* 모달 창 스타일 */
 .modal-wrap {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
+
 .modal-main {
   background: #fff;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 500px;
   text-align: center;
 }
+
 .modal-logo img {
-  width: 120px;
-  height: 40px;
+  width: 100px;
+  height: auto;
 }
-.modal-notice {
-  margin: 20px 0;
-  font-size: 16px;
+
+.modal-notice span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
+
 .modal-close {
-  font-size: 14px;
-  color: #007bff;
+  margin-top: 20px;
   cursor: pointer;
-}
-/* CS 창 스타일 */
-.top-button {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-/* 아이콘 */
-.chat-btn,
-.shop-btn,
-.top-btn {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  /* background: #444; */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 14px;
-}
-/* 아이콘 이미지 */
-.chat-btn img,
-.top-btn img {
-  width: 15vw; /* 너비를 뷰포트 너비의 15%로 설정 */
-  height: auto; /* 높이는 자동으로 조정 */
-  max-width: 75px; /* 최대 너비 설정 */
-  max-height: 75px; /* 최대 높이 설정 */
-}
-/* 탑버튼 */
-.top-btn {
-  display: none; /* 초기에는 숨김 */
-}
-.contents ul h1 {
-  font-size: 3.5rem; /* h1 폰트 크기 50% 조정 */
-}
-/* Swiper 컨테이너 스타일 */
-.swiper-container {
-  width: 100%;
-}
-.swiper-wrapper {
-  display: flex;
-}
-.swiper-slide {
-  flex: 0 0 auto;
-}
-/* Submenu와 Contents 호버 효과 */
-.submenu.left li:hover a,
-.submenu.right li:hover a {
-  color: #4caf50; /* 호버 시 글자색 변경 */
-}
-
-.contents ul li {
-  transition: transform 0.3s ease; /* 호버 시 변환 효과 설정 */
-}
-
-.contents ul li:hover {
-  transform: scale(1.05); /* 호버 시 크기 확대 */
+  color: #4caf50;
+  font-weight: bold;
 }
