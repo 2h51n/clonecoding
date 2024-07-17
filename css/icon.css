@@ -12,15 +12,9 @@
   .chat-btn,
   .shop-btn,
   .top-btn {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    /* background: #444; */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 14px;
   }
   /* 아이콘 이미지 */
   .chat-btn img,

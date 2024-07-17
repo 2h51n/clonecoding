@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* 모달 창 스타일 */
+.modal-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+  .modal-main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 800px;
+    text-align: center;
+  }
+  .modal-logo img {
+    width: 100px;
+    height: auto;
+  }
+  .modal-notice span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  .modal-close {
+    margin-top: 20px;
+    cursor: pointer;
+    color: #4caf50;
+    font-weight: bold;
+  }

@@ -61,11 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: false,
     },
     slidesPerView: 4,
-    spaceBetween: 30,
+    spaceBetween: 20,
     breakpoints: {
-      768: {
+      1024: {
+        spaceBetween: 25,
         slidesPerView: 3,
-        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
       480: {
         slidesPerView: 1,
