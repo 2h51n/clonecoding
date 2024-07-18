@@ -3,10 +3,11 @@
 .top-button {
     position: fixed; /* 화면에 고정 위치 */
     bottom: 50px; /* 하단으로부터 50px 떨어진 위치 */
-    right: 50px; /* 우측으로부터 50px 떨어진 위치 */
+    right: 20px; /* 우측으로부터 50px 떨어진 위치 */
     display: flex; /* 플렉스 박스로 설정 */
     flex-direction: column; /* 세로 방향으로 아이템 정렬 */
     gap: 10px; /* 아이템 간격 설정 */
+    z-index: 9999;
 }
 /* 아이콘 */
 .chat-btn,
@@ -15,6 +16,7 @@
     color: #fff; /* 글자색을 흰색으로 설정 */
     text-decoration: none; /* 밑줄 제거 */
     border-radius: 5px; /* 모서리 둥글게 설정 */
+    z-index: 9999;
 }
 
 /* 아이콘 이미지 */
@@ -24,6 +26,7 @@
     height: auto; /* 높이는 자동으로 조정 */
     max-width: 75px; /* 최대 너비 설정 */
     max-height: 75px; /* 최대 높이 설정 */
+    z-index: 9999;
 }
 /* 탑버튼 */
 .top-btn {
@@ -31,4 +34,16 @@
 }
 .contents ul h1 {
     font-size: 3.5rem; /* h1 폰트 크기 50% 조정 */
+}
+/* 위치 조정을 위한 추가 스타일 */
+.chat-btn {
+  order: 3; /* chat-btn을 맨 아래로 배치 */
+}
+
+.shop-btn {
+  order: 2; /* shop-btn을 chat-btn 위로 배치 */
+}
+
+.top-btn {
+  order: 1; /* top-btn을 shop-btn 위로 배치 */
 }
