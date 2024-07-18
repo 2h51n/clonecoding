@@ -1,4 +1,5 @@
 @charset "utf-8";
+/* 외부 CSS 파일 불러오기 */
 @import url("responsive.css");
 @import url("sale_copy.css");
 @import url("icon.css");
@@ -15,6 +16,7 @@
   box-sizing: border-box;
   list-style: none;
 }
+
 /* Pretendard-Regular 폰트 로드 */
 @font-face {
   font-family: "Pretendard-Regular";
@@ -22,15 +24,19 @@
   font-weight: 400;
   font-style: normal;
 }
+
+/* HTML 기본 폰트 크기 설정 */
 html {
-  font-size: 8px;
+  font-size: 15px;
 }
+
 /* 모든 링크와 문단에 Pretendard-Regular 폰트 적용 */
 a,
 p,
 h2 {
   font-family: "Pretendard-Regular" !important;
 }
+
 /* 전체 컨텐츠를 감싸는 최대 너비 설정 및 가운데 정렬 */
 .wrap {
   width: 100%;

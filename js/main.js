@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const topBtn = document.getElementById("top-btn");
   const chatBtn = document.getElementById("chat-btn");
 
-  // 페이지가 로드된 후 2초 뒤에 모달 창을 표시.
+  // 페이지가 로드된 후 1초(1000밀리초) 뒤에 모달 창을 표시.
   setTimeout(() => {
     modalWrap.style.display = "flex";
   }, 1000);
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // 데스크탑에서 채팅창을 표시할 수 있는 코드 추가.
     }
   });
+
   // sale_copy 스와이퍼 적용
   var swiperOptions = {
     loop: true,
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slideClass: "swiper-slide",
   };
   var saleCopySwiper = new Swiper(".sale_copy", swiperOptions);
+
   // 메인 이미지 갤러리 스와이퍼 적용
   var mainSwiperOptions = {
     loop: false,
@@ -70,23 +72,23 @@ document.addEventListener("DOMContentLoaded", function () {
       delay: 3000,
       disableOnInteraction: false,
     },
-    slidesPerView: 4,
-    spaceBetween: 20,
+    slidesPerView: 'auto',
     breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 25,
-      },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 4,
+        spaceBetween: 10,
       },
       480: {
-        slidesPerView: 1,
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      360: {
+        slidesPerView: 2,
         spaceBetween: 10,
       },
     },
   };
+
   // 각 섹션에 스와이퍼 적용
   document.querySelectorAll(".image-gallery").forEach((gallery) => {
     new Swiper(gallery, mainSwiperOptions);

@@ -1,15 +1,18 @@
 @charset "utf-8";
+
 /* 세일 카피 스와이퍼 적용*/
 .sale_copy {
-  overflow: hidden;
-  width: 100%;
-  text-align: center; /* 텍스트를 가운데 정렬 */
+  overflow: hidden; /* 내부 내용이 넘칠 경우 숨김 처리 */
+  width: 100%; /* 너비를 100%로 설정 */
+  text-align: center; /* 내용을 가운데 정렬 */
 }
+
 .swiper-wrapper {
-  display: flex;
+  display: flex; /* 플렉스 박스로 설정하여 자식 요소들을 행으로 배치 */
 }
+
 .swiper-slide {
-  flex: 0 0 auto;
-  padding: 0 10px;
-  white-space: normal;
+  flex: 0 0 auto; /* 플렉스 아이템이 고정 크기로 자동 크기 조정 */
+  padding: 0 10px; /* 좌우 여백 설정 */
+  white-space: normal; /* 줄바꿈 처리 */
 }

@@ -1,62 +1,78 @@
 @charset "utf-8";
+
 /* 네비게이션 메뉴 스타일 */
 .nav {
-  width: 100%; /* 너비 100% 설정 */
+  width: 100%; /* 전체 너비 설정 */
   height: 182px; /* 높이 설정 */
   position: relative; /* 상대 위치 설정 */
-  display: flex; /* 플렉스 박스로 표시 */
-  align-items: center; /* 수직 가운데 정렬 */
-  justify-content: space-between; /* 양쪽으로 요소들을 분산 배치 */
+  display: flex; /* 플렉스 박스 설정 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
 }
 
 .nav .header-notice {
-  display: flex; /* 플렉스 박스로 표시 */
-  align-items: center; /* 수직 가운데 정렬 */
-  justify-content: space-between; /* 양쪽으로 요소들을 분산 배치 */
-  width: 100%; /* 너비 100% 설정 */
+  display: flex; /* 플렉스 박스 설정 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
+  width: 100%; /* header-notice가 nav의 전체 너비를 차지하도록 설정 */
 }
 
 .nav .header-notice i {
-  display: inline-block; /* 인라인 블록 요소로 변환 */
-  margin-left: 10px; /* 왼쪽 여백 설정 */
+  display: inline-block; /* 인라인 블록 설정 */
+  margin-left: 10px; /* 좌측 여백 설정 */
 }
 
 /* 네비게이션 메뉴의 ul 스타일 */
 .nav ul {
-  display: inline-block; /* 인라인 블록 요소로 변환 */
-  list-style-type: none; /* 목록 스타일 유형 없음 */
-  padding: 0; /* 내부 여백 초기화 */
+  display: inline-block; /* 인라인 블록 설정 */
+  list-style-type: none; /* 목록 스타일 없애기 */
+  padding: 0; /* 내부 간격 없애기 */
 }
 
 /* 네비게이션 메뉴의 li 스타일 */
 .nav ul li {
-  display: inline-block; /* 인라인 블록 요소로 변환 */
+  display: inline-block; /* 인라인 블록 설정 */
   margin: 0 10px; /* 좌우 여백 설정 */
 }
 
 /* 네비게이션 메뉴의 링크 스타일 */
 .nav ul li a {
-  text-decoration: none; /* 텍스트 밑줄 제거 */
-  color: rgb(0, 0, 0); /* 링크 색상 설정 */
-  padding: 10px 15px; /* 내부 여백 설정 */
-  display: block; /* 블록 요소로 변환 */
+  text-decoration: none; /* 텍스트 밑줄 없애기 */
+  color: rgb(0, 0, 0); /* 글자색 설정 */
+  padding: 10px 15px; /* 내부 간격 설정 */
+  display: block; /* 블록 요소로 설정 */
 }
 
-/* 서브 메뉴 스타일 */
+/* sale_copy 클래스 내부의 p 태그 스타일 */
+.sale_copy p {
+  font-size: 30px; /* 글자 크기 설정 */
+}
+
+/* 서브 메뉴 왼쪽 정렬 스타일 */
 .submenu.left {
   text-align: left; /* 왼쪽 정렬 */
   font-size: 20px; /* 글자 크기 설정 */
   transition: color 0.3s ease; /* 색상 변화에 트랜지션 적용 */
 }
 
+/* 서브 메뉴 오른쪽 정렬 스타일 */
 .submenu.right {
   text-align: right; /* 오른쪽 정렬 */
   font-size: 20px; /* 글자 크기 설정 */
   transition: color 0.3s ease; /* 색상 변화에 트랜지션 적용 */
 }
 
+/* 서브 메뉴 li 요소 호버 시 링크 스타일 변화 */
 .submenu.left li:hover a,
 .submenu.right li:hover a {
-  transition: all 0.5s; /* 모든 속성에 대해 트랜지션 적용 */
+  transition: all 0.5s; /* 모든 속성에 0.5초 트랜지션 적용 */
   text-shadow: 2px 2px 4px crimson; /* 텍스트 그림자 설정 */
 }
+
+/* 주석: 네비게이션 메뉴 스타일 설정 */
+/* 주석: 네비게이션 메뉴의 ul 스타일 설정 */
+/* 주석: 네비게이션 메뉴의 li 스타일 설정 */
+/* 주석: 네비게이션 메뉴의 링크 스타일 설정 */
+/* 주석: 서브 메뉴 왼쪽 정렬 스타일 설정 */
+/* 주석: 서브 메뉴 오른쪽 정렬 스타일 설정 */
+/* 주석: 서브 메뉴 li 요소 호버 시 링크 스타일 변화 설정 */
