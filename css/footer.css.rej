@@ -1,0 +1,45 @@
+diff a/css/footer.css b/css/footer.css	(rejected hunks)
+@@ -12,26 +12,33 @@
+ .footer p {
+     color: #b0adad; /* 글자색 설정 */
+     font-family: "Pretendard-Semibold"; /* 폰트 설정 */
+-    padding: 15px 0; /* 상하 패딩 설정 */
++    padding: 10px 0; /* 상하 패딩 설정 */
++    text-align: center;
+ }
+ 
+ /* 푸터 SNS 스타일 */
+ .ft-sns {
+     text-align: center; /* 텍스트 가운데 정렬 */
+-    padding: 20px; /* 패딩 설정 */
++}
++.ft-sns img {
++  width: 100%;
+ }
+ 
+-/* 푸터 메뉴 스타일 */
+ .ft-menu {
+-    text-align: center; /* 텍스트 가운데 정렬 */
+-    word-spacing: 30px; /* 단어 사이 간격 설정 */
++  text-align: center; /* 텍스트 가운데 정렬 */
++  word-spacing: 10px; /* 단어 사이 간격 설정 */
++  line-height: 40px; /* 줄 높이 설정 */
++  font-size: 13px; /* 폰트 크기 설정 */
++  transition: font-size 0.3s ease, color 0.3s ease; /* 호버 시 트랜지션 효과 */
++
++  /* 초기에 글자색 설정 */
++  color: #333;
+ }
+ 
+-/* 푸터 정보 스타일 */
+-.ft-info {
+-    display: flex; /* Flexbox 사용 */
+-    text-align: center; /* 텍스트 가운데 정렬 */
+-    justify-content: center; /* 가로 방향 가운데 정렬 */
++/* 호버 시 스타일 변경 */
++.ft-menu:hover {
++  font-size: 15px; /* 호버 시 폰트 크기 증가 */
++  color: #ff6347; /* 호버 시 글자색 변경 */
+ }
+ 
+ /* 푸터 저작권 스타일 */
