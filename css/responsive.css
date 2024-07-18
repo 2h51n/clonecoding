@@ -1,7 +1,14 @@
 @charset "utf-8";
-
 /* TABLET 768px 이하 */
 @media (max-width: 768px) {
+  /* 헤더 공지 영역 */
+  .header-notice {
+    font-size: 20px; /* 글자 크기 축소 */
+    height: auto; /* 높이 자동으로 조정 */
+    padding: 10px; /* 패딩 축소 */
+    line-height: normal; /* 기본 줄 높이로 변경 */
+    width: 100%; /* header-notice가 nav의 전체 너비를 차지하도록 설정 */
+  }
   /* 로고 */
   .logo {
     width: 100%;
@@ -32,6 +39,14 @@
     text-align: right;
     font-size: 15px !important;
   }
+  /* h2 메인 타이틀 */
+  section h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+  }
   /* Swiper 컨테이너 스타일 */
   .swiper-container {
     width: 100%;
@@ -40,68 +55,29 @@
   }
   /* Swiper 슬라이드 */
   .swiper-slide {
-    width: calc(100% / 2);
-
-    /* 아이콘 이미지 크기 */
-    .chat-btn img,
-    .top-btn img {
-      width: 50px;
-      height: 50px;
-    }
+    width: 100%;
   }
-
+  .chat-btn img,
+  .top-btn img {
+    width: 50px;
+    height: 50px;
+  }
   /* APP 480px 이하 */
   @media (max-width: 480px) {
-    /* 헤더 공지 영역 */
-    .header-notice {
-      font-size: 3rem; /* 글자 크기 축소 */
-      height: auto; /* 높이 자동으로 조정 */
-      padding: 10px; /* 패딩 축소 */
-      line-height: normal; /* 기본 줄 높이로 변경 */
-      justify-content: space-between; /* 요소들을 양쪽 끝으로 정렬 */
-      width: 100%; /* header-notice가 nav의 전체 너비를 차지하도록 설정 */
-    }
     /* 네비게이션 메뉴 */
     .nav {
       height: auto; /* 높이 자동으로 조정 */
       flex-direction: column; /* 세로 방향으로 정렬 */
       display: none; /* NAV 메뉴 숨김 */
     }
-    s
-    /* Swiper 컨테이너 스타일 */
-    .swiper-container {
-      width: 50%;
-    }
   }
-
   /* 로고 */
   .logo img {
     display: block;
   }
-
-  /* 기본 설정 */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-  }
-
   /* 링크 스타일 */
   a,
   p {
     font-family: "Pretendard-Regular";
-  }
-
-  /* 사용자 에이전트 스타일시트 */
-  a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  /* 기본 정렬 스타일 */
-  li {
-    text-align: -webkit-match-parent;
   }
 }

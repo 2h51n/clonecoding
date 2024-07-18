@@ -27,8 +27,9 @@ html {
 }
 /* 모든 링크와 문단에 Pretendard-Regular 폰트 적용 */
 a,
-p {
-  font-family: "Pretendard-Regular";
+p,
+h2 {
+  font-family: "Pretendard-Regular" !important;
 }
 /* 전체 컨텐츠를 감싸는 최대 너비 설정 및 가운데 정렬 */
 .wrap {

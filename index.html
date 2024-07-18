@@ -47,11 +47,18 @@
     <script src="js/main.js"></script>
   </head>
   <body>
+    <!-- 전체 레이아웃 -->
     <div class="wrap">
+      <!-- 헤더 -->
       <header class="header">
-        <div class="header-notice" aria-label="공지사항">
+        <!-- 헤더 공지 -->
+        <div class="header-notice">
           <i class="fa-solid fa-chevron-left" style="color: #ffffff"></i>
-          <div class="vector-R"><img src="img/bar Vector-left.png" alt="Vector Image Left" /></div>
+          <!-- 왼쪽 벡터 이미지 -->
+          <div class="vector-R">
+            <img src="img/bar Vector-left.png" alt="Vector Image Left" />
+          </div>
+          <!-- 공지사항 슬라이드 -->
           <p class="swiper sale_copy swiper-container">
             <span class="swiper-wrapper">
               <span class="swiper-slide">SS24 50~80%OFF</span>
@@ -59,8 +66,12 @@
               <span class="swiper-slide">LIMITED TIME OFFER</span>
             </span>
           </p>
-          <div class="vector-L"><img src="img/bar Vector-right.png" alt="Vector Image Right" /></div>
+          <!-- 오른쪽 벡터 이미지 -->
+          <div class="vector-L">
+            <img src="img/bar Vector-right.png" alt="Vector Image Right" />
+          </div>
         </div>
+        <!-- 주 네비게이션 -->
         <nav class="nav" aria-label="주 네비게이션">
           <!-- 반응형 디자인 적용: 320px에서 submenu left, right 숨김 -->
           <ul class="submenu left">
@@ -69,6 +80,7 @@
             <li><a href="#">SHOPPINGBAG</a></li>
             <li><a href="#">NEW ARRIVES</a></li>
           </ul>
+          <!-- 로고 -->
           <div class="logo">
             <a href="#"><img src="img/fRANK bk.png" alt="fRANK 로고" /></a>
           </div>
@@ -79,6 +91,7 @@
             <li><a href="#">GIFT</a></li>
             <li class="sb"><a href="#">24SS MID SEASON OFF</a></li>
             <i class="icon-notice"></i>
+            <!-- 메뉴 아이콘 -->
             <div class="menu-icon">
               <i class="fa-solid fa-bars" style="color: #ffffff"></i>
               <i class="icon-menu"></i>
@@ -86,9 +99,11 @@
           </ul>
         </nav>
       </header>
+      <!-- 본문 내용 -->
       <main class="contents">
+        <!-- 유럽 섹션 -->
         <section class="eu">
-          <h1>Europe</h1>
+          <h2>Europe</h2>
           <div class="swiper-container image-gallery">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -115,8 +130,9 @@
             </div>
           </div>
         </section>
+        <!-- 일본 섹션 -->
         <section class="jp">
-          <h1>Japan</h1>
+          <h2>Japan</h2>
           <div class="swiper-container image-gallery">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -143,8 +159,9 @@
             </div>
           </div>
         </section>
+        <!-- 라이프 섹션 -->
         <section class="life">
-          <h1>Life</h1>
+          <h2>Life</h2>
           <div class="swiper-container image-gallery">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -174,8 +191,9 @@
             </div>
           </div>
         </section>
+        <!-- 아카이브 섹션 -->
         <section class="ach">
-          <h1>Achive</h1>
+          <h2>Achive</h2>
           <div class="swiper-container image-gallery">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -205,8 +223,9 @@
             </div>
           </div>
         </section>
+        <!-- 세일 섹션 -->
         <section class="sale">
-          <h1>Sale</h1>
+          <h2>Sale</h2>
           <div class="swiper-container image-gallery">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -231,6 +250,7 @@
           </div>
         </section>
       </main>
+      <!-- 푸터 -->
       <footer class="footer">
         <div class="ft-sns">
           <a href="#"><img src="img/ft-sns.png" alt="SNS 이미지" /></a>
@@ -253,6 +273,7 @@
           <p>Customize everything about you</p>
         </div>
       </footer>
+      <!-- 모달 창 -->
       <div class="modal-wrap" id="modal-wrap">
         <div class="modal-main">
           <span class="modal-logo">
@@ -267,6 +288,7 @@
           </div>
         </div>
       </div>
+      <!-- 상단 버튼 -->
       <ul class="top-button">
         <a href="#" class="chat-btn" id="chat-btn">
           <img src="img/top-btn.webp" alt="chat" />
