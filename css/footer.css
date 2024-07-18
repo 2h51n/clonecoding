@@ -18,12 +18,12 @@
 /* 푸터 SNS 스타일 */
 .ft-sns {
   text-align: center; /* 텍스트 가운데 정렬 */
-  padding: 20px; /* 패딩 설정 */
+  padding: 10px; /* 패딩 설정 */
 }
 
 .ft-menu {
   text-align: center; /* 텍스트 가운데 정렬 */
-  word-spacing: 10px; /* 단어 사이 간격 설정 */
+  word-spacing: 5px; /* 단어 사이 간격 설정 */
   line-height: 40px; /* 줄 높이 설정 */
   font-size: 13px; /* 폰트 크기 설정 */
   transition: font-size 0.3s ease, color 0.3s ease; /* 호버 시 트랜지션 효과 */
@@ -43,7 +43,8 @@
   display: flex; /* Flexbox 사용 */
   text-align: center; /* 텍스트 가운데 정렬 */
   justify-content: center; /* 가로 방향 가운데 정렬 */
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 17px;
 }
 
 /* 푸터 저작권 스타일 */
