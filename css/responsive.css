@@ -68,6 +68,7 @@
     width: 50px; /* 너비 설정 */
     height: 50px; /* 높이 설정 */
   }
+<<<<<<< HEAD
 }
 .ft-sns {
   text-align: center; /* 텍스트 가운데 정렬 */
@@ -76,6 +77,8 @@
 }
 .ft-sns img {
   width: 50%;
+=======
+>>>>>>> 87e607c9031e5a6d5dc26b12b69d83d4082a80ca
 }
 .ft-copy {
   order: 2; /* flex 요소 순서 설정 */
